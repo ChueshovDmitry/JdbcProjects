@@ -1,0 +1,4 @@
+insert into world.`name-surname` (name,surname)value ('Dmitry','Chueshov');
+#select * from world.`name-surname`;
+#update `name-surname` set name='Pety' where id=1;
+#delete from `name-surname` where name='Pety';
