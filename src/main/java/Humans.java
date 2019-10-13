@@ -3,6 +3,9 @@ public class Humans {
     private String name;
     private String surname;
 
+    public Humans() {
+    }
+
     public Humans(String name, String surname) {
         this.name = name;
         this.surname = surname;

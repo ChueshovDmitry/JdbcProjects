@@ -7,7 +7,7 @@ public class DBhelper extends Thread {
     private static final String passwordname = "root";
     private Connection cn = null;
     private Statement statement=null;
-
+    Humans humans=null;
 
     public DBhelper() {
 
@@ -27,11 +27,18 @@ public class DBhelper extends Thread {
 
 
             ResultSet rs=statement.executeQuery("SELECT*FROM humans"); //Executequery позволяет делать только селекты через резол сет
-    //        ArrayList<String>list=new ArrayList<String>();disabled, arraylist add in result set for receive values out database
-
+    //        ArrayList<String>list=new ArrayList<String>(); arraylist add in result set for receive values out database
             while (rs.next()){
-               System.out.println(rs.getString("surname")); //получение данных с таблицы по колонке surname
-                }
+                humans=new Humans();
+                humans.setId(rs.getInt("id"));
+                humans.setName(rs.getString("name"));
+                humans.setSurname(rs.getString("surname"));
+                System.out.println(humans);
+            }
+           /* while (rs.next()){
+            humans=new Humans();
+           System.out.println(rs.getString("surname")); //получение данных с таблицы по колонке surname
+                }*/
 
             cn.close();
         } catch (SQLException e) {

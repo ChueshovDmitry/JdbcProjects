@@ -11,15 +11,16 @@ public class Main {
 //            for (int i=0;i<=10;i++){
 //                fileWriter.write(Integer.toString(i));
 //            }
+
 //
 //            fileWriter.close();
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
-
-
-//        DBhelper dBhelper=new DBhelper();
-//        dBhelper.start();
+//
+        Humans hm=new Humans();
+      DBhelper dBhelper=new DBhelper();
+      dBhelper.start();
 
 
 
